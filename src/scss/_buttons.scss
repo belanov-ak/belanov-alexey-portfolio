@@ -1,0 +1,85 @@
+.primary-button {
+    display: flex;
+    position: absolute;
+    margin-left: 460px;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.primary-button__sircle {
+    left: -15px;
+    top: -15px;
+    position: absolute;
+    z-index: 0;
+}
+
+.primary-button__text {
+    @include playfair;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $primary-text-color;
+    font-size: 25px;
+    z-index: 1;
+}
+
+.primary-button__arrow {
+    margin-top: 15px;
+    width: 50px;
+    border-top: 2px $primary-text-color solid;
+    margin-left: 20px;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 15px;
+        border-top: 2px $primary-text-color solid;
+        top:12px;
+        right: 5px;
+        transform: rotate(30deg);
+    }
+}
+
+.submit-button {
+    display: flex;
+    position: absolute;
+    margin-left: 290px;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.submit-button__sircle {
+    left: -15px;
+    top: -15px;
+    position: absolute;
+    z-index: 0;
+}
+
+.submit-button__text {
+    @include playfair;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $primary-text-color;
+    font-size: 25px;
+    z-index: 1;
+}
+
+.submit-button__arrow {
+    margin-top: 15px;
+    width: 50px;
+    border-top: 2px $primary-text-color solid;
+    margin-left: 20px;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 15px;
+        border-top: 2px $primary-text-color solid;
+        top:12px;
+        right: 5px;
+        transform: rotate(30deg);
+    }
+}

@@ -1,0 +1,14 @@
+@import 'mixins';
+
+@include font('Montserrat', 'Montserrat-Regular', '400', 'normal');
+@include font ('PlayfairDisplay', 'PlayfairDisplay-Regular', '400', 'normal');
+
+@mixin monserrat{
+    font-family: 'Montserrat', 'sans-serif';
+    font-weight: 400;
+}
+
+@mixin playfair{
+    font-family: 'PlayfairDisplay', 'sans-serif';
+    font-weight: 400;
+}

@@ -1,0 +1,58 @@
+.form-group {
+    height: 40px;
+    width: 100%;
+    position: relative;
+    margin: 40px;
+
+    input {
+        height: 100%;
+        width: 90%;
+        border: none;
+        border-bottom: 1px $secondary-text-color solid;
+        outline: none;
+        background-color: $primary-color;
+        @include playfair;
+        font-size: 17px;
+        color: $primary-text-color;
+
+        &:focus ~ label,
+        &:valid ~ label {
+            transform: translateY(-25px);
+            font-size: 15px;
+            color: $secondary-text-color;
+        }
+
+        &:focus ~ .underline:before,
+        &:valid ~ .underline:before {
+            transform: scaleX(1)
+        }
+    }
+
+    label {
+        @include playfair;
+        font-size: 17px;
+        color: $primary-text-color;
+        position: absolute;
+        top: 15px;
+        left: 0;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+}
+
+.underline {
+    position: absolute;
+    bottom: -3px;
+    height: 1px;
+    width: 91%;
+
+    &:before {
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 100%;
+        background: $primary-text-color;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+}

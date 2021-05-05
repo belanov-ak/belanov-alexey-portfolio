@@ -1,0 +1,42 @@
+@import 'fonts';
+@import 'variables';
+@import 'buttons';
+
+.hero {
+    margin-top: 50px;
+    margin-bottom: 80px;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero__welcom-subblock {
+    align-self: flex-end;
+    width: 265px;
+    margin-bottom: 20px;
+}
+
+.hero__welcom-subblock-photo {
+    width: 300px;
+}
+
+.hero__welcom-block {
+    width: 700px;
+}
+
+.welcom-block__main {
+    height: 190px;
+    margin-top: 36px;
+    margin-bottom: 60px;
+    box-shadow: 9px 9px 16px rgba(0, 0, 0, 0.5), inset 4px 4px 8px rgba(0, 0, 0, 0.2);
+    line-height: 300%;
+}
+
+.welcom-block__main-text {
+    text-align: center;
+    padding: 15px 0;
+}
+
+
+
+

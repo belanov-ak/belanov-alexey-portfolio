@@ -1,0 +1,39 @@
+.skills {
+    height: 720px;
+}
+
+.skills__main {
+    margin-top: 100px;
+    margin-left: 145px
+}
+
+.hard-skills__title {
+    margin-bottom: 20px;
+}
+
+.hard-skills__main {
+    width: 680px;
+    height: 400px;
+    box-shadow: 9px 9px 16px rgba(0, 0, 0, 0.5), inset 4px 4px 8px rgba(0, 0, 0, 0.2);
+    padding-top: 1px;
+}
+
+.hard-skills__button {
+    margin-top: 25px;
+    margin-left: -20px;
+}
+
+.skill {
+    width: 600px;
+    height: 60px;
+    border-bottom: 1px $primary-text-color solid;
+    margin: 25px auto;
+}
+
+.skill__header {
+    font-size: 24px;
+}
+
+.skill__text {
+    font-size: 16px;
+}
