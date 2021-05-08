@@ -49,7 +49,9 @@ export class Form extends React.Component {
                     <div className='underline'></div>
                     <label htmlFor='message'> Your message</label>
                 </div>
-                <SubmitButton text='send message' />
+                <div className='form-button'>
+                    <SubmitButton text='send message' />
+                </div>
             </form>
         )
     }

@@ -2,15 +2,26 @@ import React from 'react'
 import { Form } from '../components/Form'
 import { Logo } from '../components/Logo'
 import { NavBar } from '../components/NavBar'
+import { NeomorfistickBlock } from '../components/NeomorfistickBlock'
 
 export class Contacts extends React.Component {
     constructor(props) {
         super(props)
+
         this.buttons = [
             './img/telegram.svg',
             './img/vk.svg',
             './img/whatsapp.svg'
         ].map((url, i) => ({id: i, url}))
+
+        this.blockStyles = {
+            width: '670px',
+            height: '454px',
+            marginTop: '100px',
+            marginLeft: '15px',
+            marginRight: '10px',
+            paddingTop: '30px'
+        }
     }
 
     render() {
@@ -28,9 +39,7 @@ export class Contacts extends React.Component {
                     </p>
                 </div>
                 <div class='contacts__main'>
-                    <div class='mail-form'>
-                        <Form />
-                    </div>
+                    <NeomorfistickBlock inner={<Form />} style={this.blockStyles} />
                 </div>
             </div>
         )
