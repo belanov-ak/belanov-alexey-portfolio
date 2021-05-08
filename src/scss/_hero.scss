@@ -25,10 +25,8 @@
 }
 
 .welcom-block__main {
-    height: 190px;
     margin-top: 36px;
     margin-bottom: 60px;
-    box-shadow: 9px 9px 16px rgba(0, 0, 0, 0.5), inset 4px 4px 8px rgba(0, 0, 0, 0.2);
     line-height: 300%;
 }
 
@@ -37,6 +35,10 @@
     padding: 15px 0;
 }
 
+.welcom-block__button {
+    position: absolute;
+    margin-left: 460px;
+}
 
 
 

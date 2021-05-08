@@ -1,7 +1,16 @@
 import React from 'react'
+import { WelcomText } from '../components/hero/welcomText'
+import { NeomorfistickBlock } from '../components/NeomorfistickBlock'
 import {PrimaryButton} from '../components/PrimaryButton'
 
 export class Hero extends React.Component {
+    constructor(props) {
+        super(props)
+        this.blockHeight = {
+            height: '190px'
+        }
+    }
+
     render() {
         return(
             <div className='hero'>
@@ -18,9 +27,7 @@ export class Hero extends React.Component {
                         Welcome to my portfolio, <br/> I’m Belanov Alexey.
                     </h1>
                     <div className='welcom-block__main'>
-                        <h2 className='welcom-block__main-text'>
-                            Web developer<br/>UX/UI designer<br/>Minimalist
-                        </h2>
+                        <NeomorfistickBlock inner={<WelcomText/>} style={this.blockHeight} />
                     </div>
                     <div className='welcom-block__button'>
                         <PrimaryButton text = 'Contact me'/>
