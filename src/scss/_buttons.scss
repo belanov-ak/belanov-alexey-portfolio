@@ -6,10 +6,17 @@
 }
 
 .primary-button__sircle {
+    display: none;
+}
+
+.primary-button__sircle-active {
     left: -15px;
     top: -15px;
     position: absolute;
     z-index: 0;
+    stroke-dasharray: 399px;
+    stroke-dashoffset: 399px;
+    animation: line-anim 2s ease forwards;
 }
 
 .primary-button__text {
@@ -30,53 +37,17 @@
     &::after {
         content: '';
         display: block;
-        position: absolute;
+        position: relative;
         width: 15px;
         border-top: 2px $primary-text-color solid;
-        top:12px;
-        right: 5px;
-        transform: rotate(30deg);
+        top: -6px;
+        left: 36px;
+        transform: rotate(-150deg);
     }
 }
 
-.submit-button {
-    display: flex;
-    position: absolute;
-    border: none;
-    outline: none;
-    background: transparent;
-}
-
-.submit-button__sircle {
-    left: -15px;
-    top: -15px;
-    position: absolute;
-    z-index: 0;
-}
-
-.submit-button__text {
-    @include playfair;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: $primary-text-color;
-    font-size: 25px;
-    z-index: 1;
-}
-
-.submit-button__arrow {
-    margin-top: 15px;
-    width: 50px;
-    border-top: 2px $primary-text-color solid;
-    margin-left: 20px;
-
-    &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        width: 15px;
-        border-top: 2px $primary-text-color solid;
-        top:12px;
-        right: 5px;
-        transform: rotate(30deg);
+@keyframes line-anim {
+    to {
+        stroke-dashoffset: 0;
     }
-}
+} 

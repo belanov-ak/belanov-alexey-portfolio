@@ -1,5 +1,6 @@
 import React from 'react'
-import { WelcomText } from '../components/hero/welcomText'
+import { WelcomText } from '../components/hero/WelcomText'
+import { Logo } from '../components/Logo'
 import { NeomorfistickBlock } from '../components/NeomorfistickBlock'
 import {PrimaryButton} from '../components/PrimaryButton'
 
@@ -14,7 +15,11 @@ export class Hero extends React.Component {
     render() {
         return(
             <div className='hero'>
+
                 <div className='hero__welcom-subblock'>
+                    <div className='hero__welcom-subblock-logo'>
+                        <Logo title='a' path='/'/>
+                    </div>
                     <div className='hero__welcom-subblock-photo-wraper'>
                         <img className='hero__welcom-subblock-photo' src='./img/person.jpg' alt='person'></img>
                     </div>
@@ -30,7 +35,7 @@ export class Hero extends React.Component {
                         <NeomorfistickBlock inner={<WelcomText/>} style={this.blockHeight} />
                     </div>
                     <div className='welcom-block__button'>
-                        <PrimaryButton text = 'Contact me'/>
+                        <PrimaryButton text = 'Contact me' url='http://localhost:3000/contacts'/>
                     </div>
                 </div>
             </div>

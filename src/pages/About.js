@@ -1,9 +1,10 @@
 import React from 'react'
-import { QualitiesIcon } from '../components/about/qualitiesIcon'
+import { QualitiesIcon } from '../components/about/QualitiesIcon'
 import { Logo } from '../components/Logo'
 import { NeomorfistickBlock } from '../components/NeomorfistickBlock'
+import { PageTemplate } from './PageTemplate'
 
-export class About extends React.Component {
+export class About extends PageTemplate {
     constructor(props) {
         super(props)
         this.blockStyle = {
@@ -15,15 +16,14 @@ export class About extends React.Component {
     render() {
         return(
             <div className='about'>
-
                 <div className='about__subblock'>
-                    <Logo title='about'/>
-
+                    <div className='about__subblock-tittle'>
+                        <Logo title='about' path='/about'/>
+                    </div>
                     <h3 className='about__subblock-text'>
                     My best personal qualities are discipline, dedication and responsibility. The main goal in my life is constant self-improvement and overcoming new frontiers!
                     </h3>
                 </div>
-
                 <div className='about__main'>
                     <div className='qualities'>
                         <h2 className='qualities__header'>Best qualities of my works:</h2>

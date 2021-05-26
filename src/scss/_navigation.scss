@@ -5,20 +5,38 @@
     height: 100px;
     display: flex;
     justify-content: flex-start;
-    margin-top: 40px;
+    
 }
 
 .navbar {
     width: 350px;
-    height: 70px;
-    margin-left: 320px;
+    height: 30px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     list-style: none;
     text-decoration: none;
-    
+
     &__item {
+        width: 18px;
+        height: 18px;
+        background-color: $primary-text-color;
+        border-radius: 15px;
         
+    }
+    
+    &__item-button {
+        display: block;
+        opacity: 0;
+        margin-left: -40px;
+        margin-top: -15px;
+        background-color: $primary-color;
+        
+
+        &:hover{
+            opacity: 1 !important;
+            transition: all 0.5s ease;
+        }
     }
 
     &__item-button {
