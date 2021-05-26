@@ -1,28 +1,28 @@
 import React from 'react'
-import { Container } from './components/container'
-import { Navigation } from './components/Navigation'
-import { DeviderLine } from './components/DeviderLine'
-import { Hero } from './pages/Hero'
-import { About } from './pages/About'
-import { Skills } from './pages/Skills'
-import { Contacts } from './pages/Contacts'
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import { Main } from './pages/Main'
+import { AboutPage } from './pages/AboutPage'
+import { SkillsPage } from './pages/SkillsPage'
+import { ContactsPage } from './pages/ContactsPage'
+import { JokePage } from './pages/JokePage'
+
+export const LoaderContext = React.createContext()
 
 function App() {
-  const pages = [
-    <Navigation/>,
-    <Hero/>,
-    <DeviderLine/>,
-    <About/>,
-    <DeviderLine />,
-    <Skills />,
-    <DeviderLine />,
-    <Contacts />
-  ]
+  
 
   return (
-    <div className="App">
-      <Container html={pages} />
-    </div>
+    <>
+      <Router >
+        <Switch>
+            <Route path='/' exact component={Main}/>
+            <Route path='/about' component={AboutPage}/>
+            <Route path='/skills' component={SkillsPage}/>
+            <Route path='/contacts' component={ContactsPage}/>
+            <Route path='/joke' component={JokePage}/>
+        </Switch>
+      </Router>
+    </>
   );
 }
 

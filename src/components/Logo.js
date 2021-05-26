@@ -1,9 +1,10 @@
-import React from 'react';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 export const Logo = (props) => (
     <div className='logo'>
-        <a className='logo__button' href='#'>
+        <Link className='logo__button' to={props.path}>
             <p>{props.title}</p>
-        </a>
+        </Link>
     </div>
 )

@@ -19,7 +19,7 @@ export const HardSkills = () => (
             <h3 className='skill__text'>The emphasis in development is on interactivity and performance</h3>
         </div>
         <div className='hard-skills__button'>
-            <PrimaryButton text='view github' />
+            <PrimaryButton text='view github' url='https://github.com/belanov-ak'/>
         </div>
     </div>
 )

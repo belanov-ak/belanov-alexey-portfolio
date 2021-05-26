@@ -1,4 +1,13 @@
-.form-group {
+.form {
+    width: 97%;
+    padding-right: 20px;
+}
+
+.form__tittle {
+    padding-left: 40px;
+}
+
+.form__group {
     height: 40px;
     width: 100%;
     position: relative;
@@ -57,6 +66,13 @@
     }
 }
 
-.form-button {
-    margin-left: 380px;
+.form__button {
+    position: relative;
+    width: 270px;
+    margin-left: 365px;
+    margin-top: 20px;
+    
+    @media (max-width: $breakpoint-xl-min) {
+        margin-left: 320px;
+    }
 }

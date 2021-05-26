@@ -1,8 +1,22 @@
 .about {
     display: flex;
-    height: 650px;
+    height: 420px;
+    margin-top: 100px;
+
     &__subblock {
-        width: 265px;
+        width: 25%;
+        margin-top: -100px;
+    }
+
+    &__main {
+        width: 75%;
+    }
+}
+
+.about__subblock-tittle {
+    width: 270px;
+    @media (max-width: $breakpoint-xl-min) {
+        width: 70%;
     }
 }
 
@@ -11,7 +25,7 @@
 }
 
 .qualities {
-    margin-top: 135px;
+    margin-top: 35px;
     margin-left: 145px
 }
 

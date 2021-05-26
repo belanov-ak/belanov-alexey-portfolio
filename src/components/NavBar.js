@@ -1,33 +1,31 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export const NavBar = ({buttons}) => {
-    if (buttons[0].title) {
-        return (
+    return (
+        <>
+        {buttons[0].path ?
             <ul className='navbar'>
                 {buttons.map(btn => (
                     <li 
                         className='navbar__item'
                         key={btn.id}
                     >
-                        <a className='navbar__item-button' href=''>{btn.title}</a>
+                        <Link className='navbar__item-button' to={btn.path}>{btn.inner}</Link>
                     </li>
                 ))}
-            </ul>
-        )
-    } else {
-        return (
+            </ul> :
             <ul className='navbar'>
                 {buttons.map(btn => (
                     <li 
                         className='navbar__item'
                         key={btn.id}
                     >
-                        <a className='navbar__item-button' href=''>
-                            <img src={btn.url} alt='icon'></img>
-                        </a>
+                        <a className='navbar__item-button' href={btn.link}>{btn.inner}</a>
                     </li>
                 ))}
             </ul>
-        )
-    }
+        }
+        </>
+    )
 }

@@ -1,0 +1,42 @@
+.logo {
+    height: 65px;
+    border: 2px $primary-text-color solid;
+
+    @media (max-width: $breakpoint-xl-min) {
+        
+        height: 55px;
+    }
+    
+    &__button {
+        @include playfair;
+        font-size: 74px;
+        text-transform: uppercase;
+        color: $primary-text-color;
+        text-decoration: none;
+        line-height: 70px;
+  
+        p {
+            margin-left: 9px;
+            margin-right: 9px;
+        }
+    }
+
+    &:hover {
+        animation: border 1s;
+    }
+
+    @media (max-width: $breakpoint-xl-min) {
+        
+
+        &__button {
+            font-size: 48px;
+        }
+    }
+}
+
+@keyframes border {
+    50% {
+        background: #06040C;
+        border-radius: 19px;
+    }
+}

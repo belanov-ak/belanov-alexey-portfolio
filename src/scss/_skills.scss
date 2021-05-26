@@ -1,10 +1,14 @@
 .skills {
-    height: 720px;
-}
-
-.skills__main {
     margin-top: 100px;
-    margin-left: 145px;
+    height: 600px;
+
+    &__subblock {
+        margin-top: -100px;
+    }
+
+    &__main {
+        margin-top: -10px;
+    }
 }
 
 .hard-skills__title {

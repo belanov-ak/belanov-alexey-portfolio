@@ -1,11 +1,14 @@
 @import '../node_modules/normalize.css/normalize.css';
 @import './scss/fonts';
+@import './scss/loader';
+@import './scss/logo';
 @import './scss/hero';
 @import './scss/about';
 @import './scss/skills';
 @import './scss/contacts';
 @import './scss/navigation';
 @import './scss/form';
+@import './scss/joke';
 @import './scss/variables';
 @import './scss/mixins';
 
@@ -43,38 +46,33 @@ h3 {
   line-height: 150%;
 }
 
+hr {
+  padding-bottom: 50px;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+
 .container {
-  width: 1110px;
+  width: 95%;
   margin: 0 auto;
+  margin-top: 40px;
 }
 
-.logo {
-  height: 65px;
-  border: 2px $primary-text-color solid;
-  
-  &__button {
-    @include playfair;
-    font-size: 74px;
-    text-transform: uppercase;
-    color: $primary-text-color;
-    text-decoration: none;
-    line-height: 70px;
+.page-header {
+  display: flex;
+  margin-bottom: 100px;
 
-    p {
-      margin-left: 9px;
-      margin-right: 9px;
-    }
+  &__navbar {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
   }
-}
-
-.devider-line {
-  width: 1100px;
-  border-bottom: 1px $primary-text-color solid;
-  margin-bottom: 60px;
 }
 
 .section-wraper {
   display: flex;
+  justify-content: space-between;
 }
 
 .neomorfistick-block {
